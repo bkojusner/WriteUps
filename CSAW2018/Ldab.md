@@ -1,4 +1,4 @@
-#CSAW 2018 - Ldab
+#CSAW 2018 - Ldab<br>
 **CTF Name:** CSAW 2018 </br>
 **Challenge Name:** Ldab</br>
 **Challenge Description:**</br>
@@ -13,13 +13,13 @@ This already indicates that there must be some sort of query language at work to
 data the user would want to see. The first test was to see what language was being used so I first typed in “\*” to</br>
 see if I would get anything, and later tried some basic SQL injection code to see if it used SQL.</br>
 ![alt text](https://i.postimg.cc/3RkbxgF7/pic2.png)</br> 
-This is a screenshot of the “*” attempt
+This is a screenshot of the “\*” attempt
 ![alt text](https://i.postimg.cc/k4LY6BTS/pic3.png)</br>
 This is a screenshot of the SQL injection attempt. It is evident the language used is not SQL. </br>
 I found that there was a language called LDAP that has OU, CN, SN, and UID as basic column names for tables.</br>
 This led me to discover that it is exploitable through some basic structured queries.</br>
 After some experimentation on trying to get all rows to print on the table given, I was able to get the flag with</br> 
-'''
+```
 *)(uid=*))(|(uid=*
-'''
+```
 ![alt text](https://i.postimg.cc/C5DPjS2Q/pic4.png)</br>
