@@ -15,9 +15,10 @@ Problem is, I don't remember how to decrypt it... could you help me out?
 **Challenge Category:** Crypto</br>
 **Challenge Points:** 354</br>
 **Solve:** </br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We are given (2531257, 43) and I immediately assume it is (n, e), especially since the challenge is named after RSA. We are already given n, e, and c which means all we would need to do is get d in order to have everything needed to decrypt the cipher text.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First step to getting d is getting the totient. After factoring n on https://www.alpertron.com.ar/ECM.HTM we were able to know that Euler’s totient is 2525776.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After this, we need the modular multiplicative inverse. We found some python code to do this on stack overflow, and after plugging in e and the totient m on this python script we were able to get d as 58739.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We are given (2531257, 43) and I immediately assume it is (n, e), especially since the challenge is named after RSA. We are already given n, e, and c which means all we would need to do is get d in order to have everything needed to decrypt the cipher text.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First step to getting d is getting the totient. After factoring n on https://www.alpertron.com.ar/ECM.HTM we were able to know that Euler’s totient is 2525776.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After this, we need the modular multiplicative inverse. We found some python code to do this on stack overflow, and after plugging in e and the totient m on this python script we were able to get d as 58739.</br>
+
 ```python
 def egcd(a, b):
     if a == 0:
@@ -34,7 +35,7 @@ def modinv(a, m):
         return x % m
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now that we have d, all we have left to do is to plug and chug in pow(c, d, n) and later convert the decimal output into ascii letters. This was initially done by hand as we were trying to submit the flag as quickly as we could, however a script was later written to automate the whole process for future reference.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now that we have d, all we have left to do is to plug and chug in pow(c, d, n) and later convert the decimal output into ascii letters. This was initially done by hand as we were trying to submit the flag as quickly as we could, however a script was later written to automate the whole process for future reference.</br>
 
 ```python
 n = int(input("Enter n: "))
