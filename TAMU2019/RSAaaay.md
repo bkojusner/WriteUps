@@ -1,7 +1,7 @@
-#TAMU – RSAaaay </br>
-**CTF Name: ** TAMU ctf</br>
-**Challenge Name: ** RSAaaay</br>
-**Challenge Description: ** </br>
+# TAMU – RSAaaay </br>
+** CTF Name: ** TAMU ctf</br>
+** Challenge Name: ** RSAaaay</br>
+** Challenge Description: ** </br>
 Hey, you're a hacker, right? I think I am too, look at what I made! </br>
 ________________________________________
 (2531257, 43) </br>
@@ -9,9 +9,9 @@ My super secret message: 906851 991083 1780304 2380434 438490 356019 921472 </br
 ________________________________________
 Problem is, I don't remember how to decrypt it... could you help me out? </br>
 Difficulty: easy
-**Challenge Category: ** Crypto</br>
-**Challenge Points: **354</br>
-**Solve: **
+** Challenge Category: ** Crypto</br>
+** Challenge Points: ** 354</br>
+** Solve: ** </br>
 We are given (2531257, 43) and I immediately assume it is (n, e), especially since the challenge is named after RSA. We are already given n, e, and c which means all we would need to do is get d in order to have everything needed to decrypt the cipher text. 
 First step to getting d is getting the totient. After factoring n on https://www.alpertron.com.ar/ECM.HTM we were able to know that Euler’s totient is 2525776. 
 After this, we need the modular multiplicative inverse. We found some python code to do this on stack overflow, and after plugging in e and the totient m on this python script we were able to get d as 58739. 
