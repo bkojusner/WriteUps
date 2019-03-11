@@ -58,11 +58,11 @@ def modinv(a, m):
     else:
         return x % m
 
-d = int(modinv(43, 2525776))
+d = int(modinv(e, m))
 
 for c in num:
   print(pow(c,d,n))
 ```
-Note: The script outputs each line in decimal, you have to split up the numbers into their respective values within the ascii range, and convert to ascii. So 103105 would be split to 103 105, which would tehn be converted to ascii. The proper modifications to the script will soon be added so it does this automatically.
+Note: The script outputs each line in decimal, you have to split up the numbers into their respective values within the ascii range, and convert to ascii. So 103105 would be split to 103 105, which would then be converted to ascii. The proper modifications to the script will soon be added so it does this automatically.
 
 > Flag: gigem{Savege_Six_Flying_Tigers}
