@@ -54,7 +54,7 @@ After some trial and error, my other teammate [Owen](https://github.com/owenflan
 
 He stated that he simply put in ```print(vars())``` and it returned the value of the flag within the vars(). This was also another idea proposed by Kevin, yet we didn't realize that it would work being that the parentheses used in the command would only equal to one element in the ```set()``` part of the code, making the length equal to 10! I had to see this for myself and ran that through and indeed we do see the flag.
 
-![](WriteUps/PLAID2019/cygm.PNG)
+![](cygm.PNG)
 
 I wrote a script to clean the output and make the process much more painless, it's in the folder under solver.py </br>
 
