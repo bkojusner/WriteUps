@@ -49,9 +49,13 @@ Seemed simple enough I thought, we just had to dissect the code and see where th
 
 I first did exactly that and statically analyzed the code, seeing where the exploit could be. My teammate [Owen](https://github.com/owenflannagan) mentioned something about exec being imported, and after some research I learned about how vulnerable python's ```eval()``` statement was. 
 I looked for some articles and started trying to dump ```dir()``` which would maybe lead me in the right direction. I typed in ```print(dir())``` which showed me what valid attributes were being held in the object. It was at this point that my other team mate Kevin proposed printing out the flag, however nothing would happen as the command was 10 lines long.</br>
+
 After some trial and error, my other teammate [Owen](https://github.com/owenflannagan) ended up solving the challenge! </br>
+
 He stated that he simply put in ```print(vars())``` and it returned the value of the flag within the vars(). This was also another idea proposed by Kevin, yet we didn't realize that it would work being that the parentheses used in the command would only equal to one element in the ```set()``` part of the code, making the length equal to 10! I had to see this for myself and ran that through and indeed we do see the flag.
-![](PLAID2019/cygm.PNG)
+
+![](WriteUps/PLAID2019/cygm.PNG)
+
 I wrote a script to clean the output and make the process much more painless, it's in the folder under solver.py </br>
 
 flag = ```PCTF{hmm_so_you_were_Able_2_g0lf_it_down?_Here_have_a_flag}```
