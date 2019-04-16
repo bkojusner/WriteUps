@@ -16,8 +16,8 @@ Reading the description, we see hints like "pit! Man..." and "short; hand"</br>
 This indicates to us that the mysteriously encoded image might have something to do with Pit man and/or Short hand.
 A simple google search returns a thing called Pitman Shorthand, and decoding it lets us get the flag (with some process of elimination)
 
-![](reference.PNG)
+![](Reference.PNG)
 
-![](writeup.PNG)
+![](Writeup.PNG)
 
 flag = ```flag{pitmanwascool}```
