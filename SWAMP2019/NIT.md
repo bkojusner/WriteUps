@@ -16,10 +16,10 @@ After testing the string with different base encodings, it is evidentlly Base85.
 ```
 depastedihrn3jtw.onion/show.php?md5=7d1ecb0f8f428b70e49de68ead337d7e
 ```
-Going to the link we see
-![](firstStep.PNG)
+Going to the link we see </br>
+![](firstStep.PNG)</br>
 This is an MD5 hash, which coincidentlly the website hosting the paste uses to find other posts.
-Putting this hash on to the URL returns a post with the flag
+Putting this hash on to the URL returns a post with the flag </br>
 
 ![](secondStep.PNG)
 
