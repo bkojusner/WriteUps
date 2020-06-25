@@ -4,14 +4,13 @@ w = open('CONDITIONS.txt', 'w')
 
 with open('if.txt', 'r') as f:
     for line in f:
-        #print(line.split("()|"))
         str_list = re.split(r'[`\-~!@#$%^&*()+\{};\'\\:"|,./?]', line)
-        fuck = list(filter(None, str_list))
+        funk = list(filter(None, str_list))
 
-        hello = [x.strip(' ') for x in fuck]
+        hello = [x.strip(' ') for x in funk]
         hello[-1] = hello[-1].strip()
-        fuckMe = list(filter(None, hello))
+        funkMe = list(filter(None, hello))
         
-        print(fuckMe)
-        for i in fuckMe:
+        print(funkMe)
+        for i in funkMe:
             w.write('s.add('+i+')\n')
