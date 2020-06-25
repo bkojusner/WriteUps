@@ -1,7 +1,7 @@
 f = open('VARIABLES.txt', 'w')
 
-with open('var.txt', 'r') as fuck:
-    for line in fuck:
+with open('var.txt', 'r') as funk:
+    for line in funk:
         name = line.split(' ')[3]
         moi = name[:-2]
         f.write(moi + " = Int('" + moi + "')" + '\n')
