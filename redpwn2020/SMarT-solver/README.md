@@ -20,7 +20,7 @@ This being said, I knew that z3 would be the perfect tool for this as there are 
 
 The whole idea behind this challenge is to find which sequence of characters  meets the proper criteria for some constriants in order to pass the check done in the program.
 
-When opening Ghidra, and waiting an incredibly long time for main to be decompiled, one can see that there is in fact some absurdly long if statement that checks all the proper constraints to determine is the flag inputed into the program is correct or not.
+When opening Ghidra, and waiting an incredibly long time for main to be decompiled, one can see that there is in fact some absurdly long if statement that checks all the proper constraints to determine if the flag inputed into the program is correct or not.
 
 I copied over the decompiled pseudo code into a txt (main.c in this repository) file for further analysis.
 
@@ -32,7 +32,7 @@ I first copied over just the if statement from the main.c file into a different 
 
 Now that I have the constraints, I need the variables so that the constraints could be interpreted by z3.
 
-I copied over all the variables into a var.txt file and then ran the varparse.py script which formatted the variable names accordingly, and also added the constraint of the variables to be between 97 and 124 for the lowercase ascii values (per the note that the flag would be in all lowercase). Additionally, I consulted my friend [Matt](https://github.com/MatthewRinaldi) about the situation and he pointed out that two of the variables would be the curly brackets of the flag so I needed to extend my range by two to account for that. 
+I copied over all the variables into a var.txt file and then ran the varparse.py script which formatted the variable names accordingly, and also added the constraint of the variables to be between 97 and 124 for the lowercase ascii values (per the note that the flag would be in all lowercase). Additionally, I consulted my friend [Matt](https://github.com/MatthewRinaldi) about my script and he pointed out that two of the variables would be the curly brackets of the flag so I needed to extend my range by two to account for that. 
 
 Once this was done I simply copied and pasted both VARIABLES and CONDITIONS into one document and then added the four needed lines to interact with the z3 api.
 I let the script run and in 30 seconds I was met with an array of numbers for all the variables. All that was left to do was rearrange the array to the proper order that it was presented in (since for some reason z3 messed up the order) and then convert it to ascii and get our flag!
