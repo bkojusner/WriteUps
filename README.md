@@ -1,3 +1,4 @@
+## Note: Posting new writeups on my website blas.me
 # WriteUps
 CTF WriteUps
 
