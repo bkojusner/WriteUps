@@ -1,0 +1,29 @@
+zero = 107,
+one = 51,
+two = 51,
+three = 112,
+four = 67,
+five = 64,
+six = 50,
+seven = 109,
+eight = 64,
+nine = 110,
+ten = 98,
+eleven = 112,
+twelve = 50,
+thirteen = 52,
+fourteen = 122,
+fifteen = 67,
+sixteen = 84,
+seventeen = 70,
+
+k33pC@2m@nbp24zCTF
+
+
+2b2z
+y1d
+-> the 1 was mistaken for the 2
+-> the y for the z
+-> the d for the b
+
+wtfCTF{k33pC@1m@ndp14yCTF}
